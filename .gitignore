@@ -1,0 +1,14 @@
+/src/
+
+/html/*
+!/html/wp-content/
+/html/wp-content/*
+!/html/wp-content/themes/
+/html/wp-content/themes/*
+!/html/wp-content/themes/nine99/
+/html/wp-content/themes/nine99/plugin-update-checker-4.10/
+
+!/html/wp-content/plugins/
+/html/wp-content/plugins/*
+!/html/wp-content/plugins/nine99/
+/html/wp-content/plugins/nine99/plugin-update-checker-4.10/
