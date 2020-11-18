@@ -79,19 +79,15 @@ if (get_option('nine_page_cache') == '1') {
 }
 
 add_action('save_post', function($post_id) {
-	$post = get_post($post_id);
-	if ($post->post_type == 'post') {
+//	$post = get_post($post_id);
+//	if ($post->post_type == 'post') {
 		nine_cache_del_all();
-	}
+//	}
 }, 10, 1);
 
 add_action('delete_post', function($post_id) {
-	$post = get_post($post_id);
-	if ($post->post_type == 'post') {
+//	$post = get_post($post_id);
+//	if ($post->post_type == 'post') {
 		nine_cache_del_all();
-	}
+//	}
 }, 10, 1);
-
-add_action('edited_term', function($term_id, $tt_id, $taxonomy) {
-	nine_cache_del_all();
-}, 10, 3);

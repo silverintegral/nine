@@ -7,6 +7,7 @@
 /html/wp-content/themes/*
 !/html/wp-content/themes/nine99/
 /html/wp-content/themes/nine99/plugin-update-checker-4.10/
+!/html/wp-content/themes/nine-child/
 
 !/html/wp-content/plugins/
 /html/wp-content/plugins/*

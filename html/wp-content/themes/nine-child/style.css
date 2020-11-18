@@ -1,0 +1,184 @@
+/*
+Theme Name: NINE (DESIGN)
+Template: nine99
+Version: 0.1.0
+Description: One-off themes for clients only
+Author: Anonymous
+Author URI: 
+
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+** All files, unless otherwise stated, are released
+** under the GNU General Public License version 2.0
+
+※このファイル以外にスタイルシートを作成しないで下さい。
+*/
+
+/* この色はレイアウト調整用です。削除して利用して下さい。 */
+/*
+:root {
+	--color-back: #fff;
+	--color-header: #0f9b9b;
+	--color-footer: #eb70e4;
+	--color-main: rgb(228, 141, 28);
+	--color-link: rgb(28, 8, 143);
+	--color-link-hover: rgb(90, 65, 236);
+}
+
+#header {
+	background-color: var(--color-header);
+}
+
+#content,
+#widget-page-left, #widget-page-right,
+#widget-post-left, #widget-post-right,
+#widget-post-top, #widget-post-bottom,
+#widget-front-left, #widget-front-right,
+#widget-other-left, #widget-other-right {
+	background-color: var(--color-main);
+}
+
+#footer {
+	background-color: var(--color-footer);
+}
+
+a {
+	color:var(--color-link);
+	text-decoration: none;
+}
+
+a:hover {
+	color:var(--color-link-hover);
+}
+*/
+
+h2 {
+	font-size: 1.2em;
+	font-weight: normal;
+	text-align: center;
+}
+
+#header {
+	width: 100%;
+	color: #fff;
+}
+
+#header>div {
+	width: 100%;
+	line-height: 0;
+}
+
+#footer {
+	width: 100%;
+	margin-top: 100px;
+	padding: 50px 0;
+	color: #fff;
+	background-color: #7a6a56;
+}
+
+#body {
+	width: 100%;
+}
+
+
+.content-data>section.content {
+	font-size: 1.5em;
+	width: 100%;
+	margin: auto;
+}
+
+.content-data>section.wide {
+	font-size: 1.5em;
+	width: 100%;
+}
+
+.content-data>section.title {
+	font-size: 2.5em;
+	width: 100%;
+	text-align: center;
+	margin: auto;
+	padding: 40px 0;
+	background-color: #dad4c4;
+}
+
+@media only screen and (min-width: 769px) {
+	#header {
+		height: 260px;
+	}
+
+	#header>div {
+		width: 1080px;
+		max-width: 100%;
+		margin: auto;
+		line-height: 0;
+	}
+
+	#header-logo {
+		display: inline-block;
+		float: left;
+	}
+
+	#header-info {
+		display: inline-block;
+		float: right;
+	}
+
+	#footer {
+		width: 100%;
+		margin-top: 100px;
+		padding: 50px 0;
+		color: #fff;
+		background-color: #7a6a56;
+	}
+
+	#footer>div {
+		width: 1080px;
+		max-width: 100%;
+		margin: auto;
+		color: #fff;
+		background-color: #7a6a56;
+	}
+
+	#nav-global {
+		clear: both;
+		width: 100%;
+		max-width: 100%;
+		text-align: center;
+		background-color: #7a6a56;
+	}
+
+	#nav-global .menu {
+		width: 1080px;
+		max-width: 100%;
+		height: 130px;
+		margin: auto;
+		vertical-align: middle;
+		display: flex;
+		margin: auto;
+	}
+	
+	#body {
+		width: 100%;
+		margin: auto;
+		max-width: 100%;
+	}
+
+
+	.content-data>section.content {
+		font-size: 1.5em;
+		max-width: 1080px;
+		margin: auto;
+	}
+
+	.content-data>section.wide {
+		font-size: 1.5em;
+	}
+
+	.content-data>section.title {
+		font-size: 2.5em;
+		text-align: center;
+		margin: auto;
+		padding: 40px 0;
+		background-color: #dad4c4;
+	}
+}
