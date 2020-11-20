@@ -27,7 +27,9 @@ add_filter('the_content', 'shortcode_unautop', 100);
 function _nine_after_setup_theme() {
 	// メニュー作成画面の初期化
 	register_nav_menus(array(
-		'global' => 'グローバルナビ',
+		'pc' => 'PCナビ',
+		'tab' => 'TABナビ',
+		'sp' => 'SPナビ',
 	));
 
 	add_theme_support('disable-custom-font-sizes');
@@ -69,6 +71,10 @@ function _nine_after_setup_theme() {
 	*/
 }
 add_action('after_setup_theme', '_nine_after_setup_theme');
+
+add_filter('nav_menu_item_id', function($id) {
+	return $id = array();
+}, 10, 1);
 
 // サイドバー作成
 function _nine_widgets_init() {

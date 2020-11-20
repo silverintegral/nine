@@ -181,7 +181,18 @@ if (get_option('nine_use_html') == '1') {
 		else
 			$html = rtrim($_SERVER["REQUEST_URI"], '/');
 
-		if (file_exists(WP_CONTENT_DIR . '/html' . $html . '.html')) {
+		if (file_exists(WP_CONTENT_DIR . '/html' . $html)) {
+			// 12Hキャッシュ
+			if (get_option('nine_html_cache') == '1') {
+				$expires = 43200;
+				header('Expires: ' . gmdate('D, d M Y H:i:s T', time() + $expires));
+				header('Cache-Control: public, max-age=' . $expires);
+			}
+	
+			//header("Content-type: text/html; charset=utf-8");
+			readfile(WP_CONTENT_DIR . '/html' . $html);
+			exit();
+		} else if (file_exists(WP_CONTENT_DIR . '/html' . $html . '.html')) {
 			// HTML、baseタグを追加してリンクの整合性を保つ
 			$html_data = file_get_contents(WP_CONTENT_DIR . '/html' . $html . '.html');
 			$base = content_url() . '/html' . rtrim($_SERVER["REQUEST_URI"], '/');

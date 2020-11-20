@@ -22,7 +22,7 @@ function nine_cache_del_all() {
 	global $wpdb;
 	$table_name = $wpdb->prefix . 'nine_cache';
 	$sql = "DELETE FROM $table_name";
-	$wpdb->query($sql);	
+	$wpdb->query($sql);
 }
 
 function nine_cache_del($uri) {
@@ -49,7 +49,6 @@ function nine_cache_get($uri, $lastmod) {
 
 if (get_option('nine_page_cache') == '1') {
 	add_action('setup_theme', function() {
-
 		$post_id = url_to_postid($_SERVER['REQUEST_URI']);
 		$post = get_post($post_id);
 
